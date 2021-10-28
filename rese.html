@@ -1,0 +1,169 @@
+<script src="rese.js"></script>
+
+<script>
+let meses = [0]; 
+let mesasOC =[0];
+let mesasDe=[0];
+let mesa1=[0];
+let mesa2=[0];
+let mesa3=[0];
+let mesa4=[0];
+let mesa5=[0];
+let mesa6=[0];
+let confimacion=[0];
+
+const reservas = {
+    nombre:'',
+    fecha:'',
+    estatus:'',
+    simon:"",
+    
+}
+reserva();
+
+  function reserva() {
+    opcion = parseInt(
+      prompt(
+        "ingresa el numero de la opcion que quieres realizar" +
+          "\n" +
+          "1.- Hacer una reservacion" +
+          "\n" +
+          "2.- Mesas Ocupadas" +
+          "\n" +
+          "3.-Mesa desocupadas" +
+          "\n" +
+          "4.-Cofriamcion" +
+          "\n" +
+          "5.- salir"
+      )
+    );
+
+    switch (opcion) {
+      case 1:
+        RESERVACION();
+        break;
+      case 2:
+        MESASOCUPADAS();
+        break;
+      case 3:
+        MESEASDESOCUPADAS();
+        break;
+      case 4:
+      CONFIRMACION();
+        break;
+        case 5:
+        
+        break;
+      default:
+        break;
+    }
+  }
+  function RESERVACION() {
+    let nRESE = prompt("Cuantas reservacciones deseas??");
+    for (let i = 1; i <= nRESE; i++) {
+      console.log("reservacion " );
+      let ingresa = prompt("Nombre del quien reserva");
+      let EFECHI = prompt("fecha");
+      let mesaq =prompt("Selecciona una mesa "+"\n" +"1"+"\n" +"2"+"\n"+"3"+"\n"+"4"+"\n"+"5"+"\n"+"6");
+      let conf =prompt("vas ir?");
+if (mesaq == "1") {
+
+mesa1.push("Nombre: "+ingresa+" Fecha: "+EFECHI+" mesas: "+mesaq+ "confirmacion: " +conf);
+
+}else{
+
+
+}
+if (mesaq  == "2") {
+
+mesa2.push("Nombre: "+ingresa+" Fecha: "+EFECHI+" mesas: "+mesaq+ "confirmacion: "+conf);
+
+}else{
+
+
+}
+if (mesaq == "3") {
+
+mesa3.push("Nombre: "+ingresa+" Fecha: "+EFECHI+" mesas: "+mesaq+ "confirmacion: "+conf);
+
+}else{
+
+
+}
+if (mesaq == "4") {
+
+mesa4.push("Nombre: "+ingresa+" Fecha: "+EFECHI+" mesas: "+mesaq+ "confirmacion: "+conf);
+
+}else{
+
+}
+if (mesaq == "5") {
+
+mesa5.push("Nombre: "+ingresa+" Fecha: "+EFECHI+" mesas: "+mesaq+ "confirmacion: "+conf);
+
+}else{
+
+
+}
+if (mesaq == "6") {
+
+mesa6.push("Nombre: "+ingresa+" Fecha: "+EFECHI+" mesas: "+mesaq+ "confirmacion: "+conf);
+
+}else{
+
+
+}
+
+
+
+
+
+
+
+
+    reservas.nombre=ingresa;
+    reservas.fecha= EFECHI;
+    reservas.status=mesaq;
+    reservas.simon=conf;    
+    meses.push("Nombre: "+ingresa+" Fecha: "+EFECHI+" mesas: "+mesaq+ "confirmacion: "+conf);
+    console.log(meses);
+    }
+    reserva();
+  }
+ 
+
+  function MESEASDESOCUPADAS() {
+    console.log(mesasDe);
+    console.log("Mesas que ya estan ocupadas: "+ mesasDe.length); 
+    reserva();
+    
+  }
+  function MESASOCUPADAS() {
+    console.log(meses);
+    console.log("Mesas que ya estan ocupadas: "+ meses); 
+    reserva();
+    
+  }
+ 
+  function CONFIRMACION() {
+    let numeroSeleccion = parseFloat(prompt("Quien dijo que si?"));
+    console.log(meses[numeroSeleccion]);
+    reserva();
+}
+function MESEASDESOCUPADAS() {
+    console.log("quien ocupa la mesa1: ");
+    console.log(mesa1);
+    console.log("quien esta en la mesa 2:");
+    console.log(mesa2);
+    console.log("quien ocupa la mesa 3 : ");
+    console.log(mesa3);
+    console.log("quien esta en la mesa 4 :");
+    console.log(mesa4);
+    console.log("quien ocupa la mesa 5 : ");
+    console.log(mesa5);
+    console.log("quien esta en la mesa 6 :");
+    console.log(mesa6);
+   reserva;
+}
+
+</script>
